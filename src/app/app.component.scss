@@ -1,0 +1,12 @@
+::ng-deep app-root {
+    display: grid;
+    grid-template-rows: 55px 1fr 100px;
+    height: 100vh;
+
+    app-navbar {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}

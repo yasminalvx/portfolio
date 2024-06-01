@@ -1,0 +1,12 @@
+::ng-deep app-navbar {
+    .card {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        background-color: var(--surface-0) !important;
+        height: 100%;
+    }
+    .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
+        background-color: transparent !important;
+    }
+}

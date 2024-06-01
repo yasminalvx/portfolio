@@ -1,0 +1,13 @@
+<div class="card flex justify-content-center">
+  <p-selectButton
+    [options]="stateOptions"
+    [(ngModel)]="value"
+    optionLabel="label"
+    optionValue="value"
+    (ngModelChange)="toggleTheme()"
+  >
+    <ng-template let-item pTemplate>
+      <i [class]="item.icon" [title]="item.label"></i>
+    </ng-template>
+  </p-selectButton>
+</div>

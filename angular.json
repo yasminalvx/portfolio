@@ -30,7 +30,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/assets/scss/theme-aura-dark-indigo.scss",
+                "bundleName": "aura-dark-indigo",
+                "inject": false
+              },
+              {
+                "input": "src/assets/scss/theme-aura-light-indigo.scss",
+                "bundleName": "aura-light-indigo",
+                "inject": false
+              }
+             
             ],
             "scripts": [],
             "server": "src/main.server.ts",
