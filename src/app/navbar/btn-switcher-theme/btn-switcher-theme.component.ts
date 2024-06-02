@@ -17,7 +17,6 @@ export class BtnSwitcherThemeComponent implements OnInit {
   ];
 
   value: string = 'dark';
-  controlVariable = 'dark';
 
   ngOnInit(): void {
     this.value = this.colorSchemeSystem;
@@ -35,11 +34,6 @@ export class BtnSwitcherThemeComponent implements OnInit {
 
   toggleTheme() {
     if (typeof document === 'undefined') return;
-    if (!this.value) {
-      this.value = this.controlVariable;
-      return;
-    }
-    this.controlVariable = this.value;
     const themeLink = document?.getElementById('app-theme') as HTMLLinkElement;
     if (this.isDarkMode) {
       themeLink.href = 'aura-dark-indigo.css';
