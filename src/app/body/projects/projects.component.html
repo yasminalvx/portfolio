@@ -1,0 +1,26 @@
+<div class="card">
+  <h2>Projects</h2>
+  <div class="grid">
+    @for (project of projects; track $index) {
+    <div class="col-6">
+      <p-card [header]="project.name" class="block h-full relative">
+        <p class="mb-5">
+          {{ project.description }}
+        </p>
+        <div class="flex gap-2 flex-wrap mb-6">
+          @for (technology of project.technologies; track technology) {
+          <p-tag [value]="technology" [rounded]="true" />
+          }
+        </div>
+        <p-button
+          label="View"
+          class="mt-5"
+          rounded="true"
+          outlined="true"
+          class="absolute right-0 bottom-0 pb-4 pr-4"
+        />
+      </p-card>
+    </div>
+    }
+  </div>
+</div>
