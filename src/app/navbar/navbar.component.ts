@@ -18,6 +18,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.items = [
       { label: 'Home', id: 'item-home', command: () => this.scrollTo('home') },
+      { label: 'Work', id: 'item-work', command: () => this.scrollTo('work') },
       { label: 'Education', id: 'item-education', command: () => this.scrollTo('education') },
       { label: 'Projects', id: 'item-projects', command: () => this.scrollTo('projects') },
       { label: 'Contact', id: 'item-contact', command: () => this.scrollTo('contact') },

@@ -1,0 +1,12 @@
+<p-timeline [value]="events" class="w-full md:w-20rem" align="alternate">
+  <ng-template pTemplate="opposite" let-event>
+    <h3>{{event.status}}</h3>
+    @if (event.title) {
+      <app-card-timeline
+        [title]="event.title"
+        [description]="event.description"
+        [align]="event.align"
+      ></app-card-timeline>
+    }
+  </ng-template>
+</p-timeline>
