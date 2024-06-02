@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { WorkComponent } from './work/work.component';
 import { ContactComponent } from './contact/contact.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @Component({
   selector: 'app-body',
@@ -17,7 +18,8 @@ import { ContactComponent } from './contact/contact.component';
     WorkComponent,
     EducationComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    SkillsComponent
   ],
 })
 export class BodyComponent implements OnInit {

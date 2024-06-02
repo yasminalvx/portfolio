@@ -12,15 +12,15 @@ import { BtnSwitcherThemeComponent } from './btn-switcher-theme/btn-switcher-the
   imports: [CommonModule, TabMenuModule, BtnSwitcherThemeComponent],
 })
 export class NavbarComponent implements OnInit {
-  items: MenuItem[] | undefined;
+  items: MenuItem[] = [];
   activeItem: MenuItem | undefined;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e: any) {
     if (!document) return;
     let elementPosition = (document.documentElement.scrollTop || document.body.scrollTop) + 1;
-    const sectionsStr = ['home', 'work', 'education', 'projects', 'contact'];
-    const sections = sectionsStr.map(section => document.getElementById(section)?.offsetTop || 0);
+    const sectionsStr = this.items?.map(x => x.id!.replace('item-', ''));
+    const sections = sectionsStr?.map((section: string) => document.getElementById(section)?.offsetTop ?? 0);
     Object.entries(sections).forEach(([index, section]) => {
       if (elementPosition >= section && (elementPosition < sections[+index + 1] || +index === sections.length - 1)) {
         this.activeItem = this.items?.[+index];
@@ -31,6 +31,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.items = [
       { label: 'Home', id: 'item-home', command: () => this.scrollTo('home') },
+      { label: 'Skills', id: 'item-skills', command: () => this.scrollTo('skills') },
       { label: 'Work', id: 'item-work', command: () => this.scrollTo('work') },
       { label: 'Education', id: 'item-education', command: () => this.scrollTo('education') },
       { label: 'Projects', id: 'item-projects', command: () => this.scrollTo('projects') },
