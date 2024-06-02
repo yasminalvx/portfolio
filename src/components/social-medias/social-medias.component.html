@@ -1,0 +1,6 @@
+
+<div class="flex gap-3 mb-3">
+  @for (socialMedia of socialMedias; track socialMedia.icon) {
+    <p-button [icon]="socialMedia.icon" rounded="true" outlined="true" />
+  }
+</div>

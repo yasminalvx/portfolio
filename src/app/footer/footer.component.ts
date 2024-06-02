@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { SocialMediasComponent } from '../../components/social-medias/social-medias.component';
+import { ButtonModule } from 'primeng/button';
+interface Link {
+  name: string;
+  url: string;
+}
 
 @Component({
   selector: 'app-footer',
@@ -7,10 +13,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
   standalone: true,
   imports: [
-    CommonModule,
+    CommonModule, SocialMediasComponent, ButtonModule
   ],
 })
 export class FooterComponent implements OnInit {
+    links: Link[] = [
+      {
+        name: 'FAQ',
+        url: 'faq'
+      },
+      {
+        name: 'Services',
+        url: 'services'
+      },
+      {
+        name: 'About Me',
+        url: 'about'
+      },
+      {
+        name: 'Contact',
+        url: 'contact'
+      }
+    ];
 
   constructor() { }
 
