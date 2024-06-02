@@ -1,0 +1,19 @@
+::ng-deep app-skills {
+    .col-6 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-6 > h2 {
+        flex: 0 0 auto;
+    }
+    p-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .p-card {
+            height: 100%;
+        }
+    }
+}

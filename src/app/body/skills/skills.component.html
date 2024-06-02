@@ -1,3 +1,33 @@
 <div class="card">
-  <h2>Skills</h2>
+  <h1>Skills</h1>
+  <p>Technologies I've been working with recently</p>
+  <div class="grid gap-4">
+    <div class="col-6">
+      <h2>Coding Skills</h2>
+      <p-card>
+        <div class="card">
+          @for (technologie of technologies; track $index) {
+          <div class="col-12">
+            <app-card-skill [technology]="technologie"></app-card-skill>
+          </div>
+          }
+        </div>
+      </p-card>
+    </div>
+    <div class="col-6">
+      <h2>Designer Skills</h2>
+      <p-card>
+        <div class="card">
+          @for (skill of technicalsSkills; track $index) {
+          <div class="col-12">
+            <app-card-skill
+              [technology]="skill"
+              class="h-full"
+            ></app-card-skill>
+          </div>
+          }
+        </div>
+      </p-card>
+    </div>
+  </div>
 </div>
