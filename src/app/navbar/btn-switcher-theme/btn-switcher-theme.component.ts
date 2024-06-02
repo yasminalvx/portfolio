@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SelectButtonModule } from 'primeng/selectbutton';
 
@@ -10,20 +10,37 @@ import { SelectButtonModule } from 'primeng/selectbutton';
   standalone: true,
   imports: [CommonModule, FormsModule, SelectButtonModule],
 })
-export class BtnSwitcherThemeComponent {
+export class BtnSwitcherThemeComponent implements OnInit {
   stateOptions: any[] = [
     { label: 'Light', value: 'light', icon: 'pi pi-sun'},
     { label: 'Dark', value: 'dark', icon: 'pi pi-moon'},
   ];
 
   value: string = 'dark';
+  controlVariable = 'dark';
+
+  ngOnInit(): void {
+    this.value = this.colorSchemeSystem;
+    this.toggleTheme();
+  }
 
   get isDarkMode() {
     return this.value === 'dark';
   }
 
+  get colorSchemeSystem() {
+    if (typeof window === 'undefined' || !window.matchMedia) return 'light';
+    return window?.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
   toggleTheme() {
-    const themeLink = document.getElementById('app-theme') as HTMLLinkElement;
+    if (typeof document === 'undefined') return;
+    if (!this.value) {
+      this.value = this.controlVariable;
+      return;
+    }
+    this.controlVariable = this.value;
+    const themeLink = document?.getElementById('app-theme') as HTMLLinkElement;
     if (this.isDarkMode) {
       themeLink.href = 'aura-dark-indigo.css';
     } else {

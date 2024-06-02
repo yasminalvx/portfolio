@@ -5,6 +5,7 @@
     optionLabel="label"
     optionValue="value"
     (ngModelChange)="toggleTheme()"
+    unselectable="true"
   >
     <ng-template let-item pTemplate>
       <i [class]="item.icon" [title]="item.label"></i>
