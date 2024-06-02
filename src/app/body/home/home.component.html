@@ -1,18 +1,22 @@
-<div class="card">
+<div class="card py-6">
   <div class="grid">
     <div class="col-6">
-      <h1 class="mb-2">Hi, It's <strong>Yasmin</strong></h1>
-      <h3 class="mt-0">I'm a <strong>Frontend Developer</strong></h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus corporis quo placeat, repellat ut, rerum earum dolorum iusto veniam deleniti repellendus nisi saepe voluptates porro. Rerum reiciendis nostrum quia consequuntur?</p>
-      <div class="flex gap-3 mb-3">
-        @for (socialMedia of socialMedias; track socialMedia.icon) {
-          <p-button [icon]="socialMedia.icon" rounded="true" outlined="true" />
-        }
+      <div class="flex flex-column flex-wrap justify-content-center h-full">
+        <h1 class="mb-2">Hi, It's <strong>Yasmin</strong></h1>
+        <h3 class="mt-0">I'm a <strong>Frontend Developer</strong></h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus corporis quo placeat, repellat ut, rerum earum dolorum iusto veniam deleniti repellendus nisi saepe voluptates porro. Rerum reiciendis nostrum quia consequuntur?</p>
+        <div class="flex gap-3 mb-3">
+          @for (socialMedia of socialMedias; track socialMedia.icon) {
+            <p-button [icon]="socialMedia.icon" rounded="true" outlined="true" />
+          }
+        </div>
+        <p-button label="Contact" rounded="true"></p-button>
       </div>
-      <p-button label="Contact" rounded="true"></p-button>
     </div>
     <div class="col-6">
-      <img src="assets/img/profile.png" alt="profile of yasmin" class="profile" />
+      <div class="flex flex-wrap justify-content-center align-content-center h-full">
+        <img src="assets/img/profile.png" alt="profile of yasmin" class="profile" />
+      </div>
     </div>
   </div>
 </div>
