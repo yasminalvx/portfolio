@@ -49,7 +49,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       name: 'UI Design',
-      icon: 'pallet',
+      icon: 'palette',
       level: 80,
     },
     {

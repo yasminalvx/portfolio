@@ -9,6 +9,11 @@
     }
     .p-selectbutton .p-button.p-highlight::before {
         border-radius: 50%;
+        background-color: var(--primary-500);
+        
+    }
+    .p-selectbutton .p-button.p-highlight i::before {
+        color: #fff;
     }
     .p-buttonset .p-button {
         width: 35px;

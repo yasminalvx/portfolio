@@ -1,0 +1,14 @@
+p-button {
+    button.p-button-outlined {
+        &:hover, &:focus {
+            border-color: var(--primary-400);
+            box-shadow: 0 0 5px 3px var(--primary-400) !important;
+        }
+    }
+    button:not(.p-button-outlined) {
+        &:hover, &:focus {
+            border-color: var(--primary-500);
+            box-shadow: 0 0 5px 3px var(--primary-400) !important;
+        }
+    }
+}

@@ -12,7 +12,7 @@ interface SocialMedia {
 @Component({
   selector: 'app-social-medias',
   templateUrl: './social-medias.component.html',
-  styleUrls: ['./social-medias.component.css'],
+  styleUrls: ['./social-medias.component.scss'],
   standalone: true,
   imports: [CommonModule, ButtonModule]
 })

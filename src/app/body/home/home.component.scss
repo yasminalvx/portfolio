@@ -1,5 +1,41 @@
 strong {
-    color: var(--primary-600)
+    -webkit-text-stroke: 1px var(--primary-500);
+    position: relative;
+    color: var(--surface-0);
+    text-transform: uppercase;
+    font-size: larger;
+    font-family: 'Poppins', sans-serif;
+
+    &::before {
+        content: attr(data-text);
+        text-wrap: nowrap;
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: var(--primary-500);
+        -webkit-text-stroke: 0px var(--primary-500);
+        overflow: hidden;
+        animation: animate 4s linear infinite;
+        padding-left: 1.4px;
+        padding-top: 1.8px;
+    }
+}
+
+h1 strong::before {
+    padding-top: 1.1px;
+    padding-left: 1.4px;
+}
+
+@keyframes animate {
+    0%, 10%, 100% {
+        width: 0%;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+    
 }
 
 .profile {

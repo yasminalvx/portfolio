@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
+  IconDefinition,
   faAngular,
   faFigma,
   faSass
 } from '@fortawesome/free-brands-svg-icons';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faPaintBrush, faPalette } from '@fortawesome/free-solid-svg-icons';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { Technology } from '../skills.component';
 
@@ -21,15 +22,14 @@ export class CardSkillComponent {
   @Input() technology!: Technology;
 
   get icon() {
-    switch (this.technology.icon) {
-      case 'angular':
-        return faAngular;
-      case 'sass':
-        return faSass;
-      case 'figma':
-        return faFigma;
-      default:
-        return faCode;
-    }
+    const technologyIcons: {[key: string]: IconDefinition} = {
+      'angular': faAngular,
+      'sass': faSass,
+      'figma': faFigma,
+      'palette': faPalette,
+      'paint-brush': faPaintBrush,
+    };
+
+    return technologyIcons[this.technology.icon] || faCode;
   }
 }

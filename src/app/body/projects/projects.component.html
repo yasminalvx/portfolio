@@ -2,8 +2,12 @@
   <h2>Projects</h2>
   <div class="grid">
     @for (project of projects; track $index) {
-    <div class="col-6">
-      <p-card [header]="project.name" class="block h-full relative">
+    <div class="col-6 mb-4">
+      <p-card
+        [header]="project.name"
+        class="block h-full relative"
+        [ngClass]="{ 'pr-2': $index % 2 === 0, 'pl-2': $index % 2 !== 0 }"
+      >
         <p class="mb-5">
           {{ project.description }}
         </p>

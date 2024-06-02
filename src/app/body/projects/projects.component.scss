@@ -1,6 +1,12 @@
 ::ng-deep app-projects {
-    .p-card {
-       height: 100%;
+  .p-card {
+    height: 100%;
+    border: 1px solid var(--primary-500);
+    &:hover {
+        transform: scale(1.05) translateY(-5px);
+      box-shadow: 0 0 5px 3px var(--primary-400) !important;
+      z-index: 3;
     }
-
+  }
 }
+
