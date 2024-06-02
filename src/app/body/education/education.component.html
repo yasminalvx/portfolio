@@ -1,7 +1,7 @@
 <div class="card">
-  <h2>Works</h2>
+  <h2>Education</h2>
   <p-timeline [value]="events" class="w-full md:w-20rem" align="alternate">
-    <ng-template pTemplate="opposite" let-event>
+    <ng-template pTemplate="content" let-event>
       <h3>{{event.status}}</h3>
       @if (event.title) {
         <app-card-timeline

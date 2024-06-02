@@ -3,12 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { TimelineModule } from 'primeng/timeline';
 import { CardTimelineComponent } from '../../../components/card-timeline/card-timeline.component';
 
-interface EventItem {
+export interface EventItem {
   status?: string;
   title?: string;
   description?: string;
   align?: string;
-  image?: string;
 }
 
 @Component({
