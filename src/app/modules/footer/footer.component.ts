@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { SocialMediasComponent } from '../../components/social-medias/social-medias.component';
+import { SocialMediasComponent } from '../../../components/social-medias/social-medias.component';
 import { ButtonModule } from 'primeng/button';
 interface Link {
   name: string;

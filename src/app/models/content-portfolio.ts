@@ -1,4 +1,4 @@
-import { Technology } from "../body/skills/card-skill/card-skill.component";
+import { Technology } from "../modules/body/skills/card-skill/card-skill.component";
 
 
 export interface ContentPortfolio {

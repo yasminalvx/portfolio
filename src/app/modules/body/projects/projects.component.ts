@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { TagModule } from 'primeng/tag';
-import { portfolioEn } from '../../data/portfolio-data';
-import { ContentPortfolio } from '../../models/content-portfolio';
+import { portfolioEn } from '../../../data/portfolio-data';
+import { ContentPortfolio } from '../../../models/content-portfolio';
 
 @Component({
   selector: 'app-projects',

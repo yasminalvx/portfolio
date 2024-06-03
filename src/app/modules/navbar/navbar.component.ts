@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { TabMenuModule } from 'primeng/tabmenu';
-import { ContentPortfolio } from '../models/content-portfolio';
+import { ContentPortfolio } from '../../models/content-portfolio';
 import { BtnSwitcherThemeComponent } from './btn-switcher-theme/btn-switcher-theme.component';
 
 @Component({
