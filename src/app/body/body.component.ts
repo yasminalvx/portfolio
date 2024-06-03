@@ -1,10 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { EducationComponent } from './education/education.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { WorkComponent } from './work/work.component';
-import { ContactComponent } from './contact/contact.component';
 import { SkillsComponent } from './skills/skills.component';
 
 @Component({
@@ -15,10 +12,7 @@ import { SkillsComponent } from './skills/skills.component';
   imports: [
     CommonModule,
     HomeComponent,
-    WorkComponent,
-    EducationComponent,
     ProjectsComponent,
-    ContactComponent,
     SkillsComponent
   ],
 })

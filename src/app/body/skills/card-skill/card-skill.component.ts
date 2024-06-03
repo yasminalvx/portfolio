@@ -3,13 +3,19 @@ import { Component, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   IconDefinition,
+  IconName,
   faAngular,
   faFigma,
   faSass
 } from '@fortawesome/free-brands-svg-icons';
 import { faCode, faPaintBrush, faPalette } from '@fortawesome/free-solid-svg-icons';
 import { ProgressBarModule } from 'primeng/progressbar';
-import { Technology } from '../skills.component';
+
+export interface Technology {
+  name: string;
+  icon: IconName;
+  level: number;
+}
 
 @Component({
   selector: 'app-card-skill',

@@ -2,11 +2,18 @@
   <div class="grid">
     <div class="col-6">
       <div class="flex flex-column flex-wrap justify-content-center h-full">
-        <h1 class="mb-2">Hi, It's <strong data-text="Yasmin Alves">Yasmin Alves</strong></h1>
+        <h1 class="mb-2">Hi, It's <strong data-text="Yasmin">Yasmin</strong></h1>
         <h2 class="mt-0">I'm a <strong data-text="Frontend Developer">Frontend Developer</strong></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus corporis quo placeat, repellat ut, rerum earum dolorum iusto veniam deleniti repellendus nisi saepe voluptates porro. Rerum reiciendis nostrum quia consequuntur?</p>
+        <p>{{portfolio.home.description}} </p>
         <app-social-medias></app-social-medias>
-        <p-button label="Contact" rounded="true"></p-button>
+        <div class="flex gap-3">
+          <a href="mailto:yasminalves.developer@gmail.com">
+            <p-button label="Contact" rounded="true"></p-button>
+          </a>
+          <a href="assets/pdf/cv.pdf" download="yasmin-cv.pdf">
+            <p-button label="Download CV" rounded="true" outlined="true"></p-button>
+          </a>
+        </div>
       </div>
     </div>
     <div class="col-6">

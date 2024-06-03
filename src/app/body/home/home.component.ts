@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { SocialMediasComponent } from '../../../components/social-medias/social-medias.component';
+import { portfolioEn } from '../../data/portfolio-data';
+import { ContentPortfolio } from '../../models/content-portfolio';
 
 @Component({
   selector: 'app-home',
@@ -10,13 +12,7 @@ import { SocialMediasComponent } from '../../../components/social-medias/social-
   standalone: true,
   imports: [CommonModule, ButtonModule, SocialMediasComponent],
 })
-export class HomeComponent implements OnInit {
-
- 
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class HomeComponent {
+  public portfolio: ContentPortfolio = portfolioEn;
 
 }

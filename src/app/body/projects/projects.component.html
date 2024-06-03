@@ -1,10 +1,10 @@
 <div class="card">
-  <h2>Projects</h2>
+  <h2> Projects </h2>
   <div class="grid">
-    @for (project of projects; track $index) {
+    @for (project of portolio.projects.projects; track $index) {
     <div class="col-6 mb-4">
       <p-card
-        [header]="project.name"
+        [header]="project.title"
         class="block h-full relative"
         [ngClass]="{ 'pr-2': $index % 2 === 0, 'pl-2': $index % 2 !== 0 }"
       >
@@ -17,7 +17,7 @@
           }
         </div>
         <p-button
-          label="View"
+          [label]="portolio.projects.buttonTitle"
           class="mt-5"
           rounded="true"
           outlined="true"
