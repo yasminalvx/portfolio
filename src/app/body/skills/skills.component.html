@@ -1,9 +1,8 @@
 <div class="card">
   <h1> Skills </h1>
-  <p> {{portolio.skills.description}} </p>
   <div class="grid gap-4">
     <div class="col-6">
-      <h2> {{portolio.skills.codingSkillsTitle}} </h2>
+      <h2> Coding Skills </h2>
       <p-card>
         <div class="card">
           @for (technologie of portolio.skills.technologies; track $index) {
@@ -15,7 +14,7 @@
       </p-card>
     </div>
     <div class="col-6">
-      <h2> {{portolio.skills.technicalSkillsTitle}} </h2>
+      <h2> Technical Skills </h2>
       <p-card>
         <div class="card">
           @for (skill of portolio.skills.technicalsSkills; track $index) {

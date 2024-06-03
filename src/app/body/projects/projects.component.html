@@ -1,7 +1,7 @@
 <div class="card">
   <h2> Projects </h2>
   <div class="grid">
-    @for (project of portolio.projects.projects; track $index) {
+    @for (project of portolio.projects; track $index) {
     <div class="col-6 mb-4">
       <p-card
         [header]="project.title"
@@ -17,7 +17,7 @@
           }
         </div>
         <p-button
-          [label]="portolio.projects.buttonTitle"
+          label="View"
           class="mt-5"
           rounded="true"
           outlined="true"

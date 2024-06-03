@@ -1,17 +1,8 @@
 import { ContentPortfolio } from "../models/content-portfolio";
 
 export const portfolioEn: ContentPortfolio = {
-    home: {
-        title: "Hello, I'm",
-        subtitle: "I'm",
-        subtitle2: "Front-end Developer",
-        description: "I'm a developer at Minsait, working with Angular and .NET. I develop modern and intuitive web applications with Angular, and implement robust and scalable backend systems with .NET. At Minsait, I collaborate on challenging projects, transforming complex requirements into effective solutions, always focused on high performance and usability.",
-        buttonContact: "Contact me",
-        buttonDownloadCV: "Download CV"
-    },
+    home: "I'm a developer at Minsait, working with Angular and .NET. I develop modern and intuitive web applications with Angular, and implement robust and scalable backend systems with .NET. At Minsait, I collaborate on challenging projects, transforming complex requirements into effective solutions, always focused on high performance and usability.",
     skills: {
-        title: "Skills",
-        description: "These are some of the technologies I work with:",
         technologies: [
             {
                 name: "Angular",
@@ -51,14 +42,8 @@ export const portfolioEn: ContentPortfolio = {
                 level: 40
             }
         ],
-        codingSkillsTitle: "Coding Skills",
-        technicalSkillsTitle: "Technical Skills"
     },
-    projects: {
-        title: "Projects",
-        description: "These are some of the projects I've worked on:",
-        buttonTitle: "View",
-        projects: [
+    projects:  [
             {
                 title: "Project 1",
                 description: "Description of project 1",
@@ -81,11 +66,5 @@ export const portfolioEn: ContentPortfolio = {
                 link: "https://www.google.com"
             }
         ]
-    },
-    navbarTitles: {
-        home: "Home",
-        skills: "Skills",
-        projects: "Projects"
-    },
-    contactMeTitle: "Contact me"
+    
 }
